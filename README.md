@@ -1,24 +1,42 @@
-# README
+# Eco＿Eatsデータベース設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# usersテーブル
+|Column            |Type    |Options                      |
+|------------------|--------|-----------------------------|
+|email             |string  |null: false, unique: true    |
+|encrypted_password|string  |null: false, default: ""     |
+|nickname          |string  |null: false                  |
+|age               |integer |null: false                  |
+|gender            |string  |null: false                  |
 
-Things you may want to cover:
+has_many :meals
 
-* Ruby version
+# mealsテーブル
+|Column            |Type       |Options                        |
+|------------------|-----------|-------------------------------|
+|user_id           |references |foreign_key: true, null: false |
+|name              |string     |null: false                    |
+|description       |text       |null: false                    |
+|meal_time         |date       |null: false                    |
 
-* System dependencies
+belongs_to :user
+has_many :meal_items
 
-* Configuration
+# fooditemsテーブル
+|Column            |Type    |Options                        |
+|------------------|--------|-------------------------------|
+|name              |string  |null: false                    |
+|co2_emission      |float   |                               |
+|nutritional_value |json    |                               |
 
-* Database creation
+has_many :meal_items
 
-* Database initialization
+# mealitemsテーブル
+|Column            |Type       |Options                        |
+|------------------|-----------|-------------------------------|
+|meal_id           |references |foreign_key: true, null: false |
+|food_item_id      |references |foreign_key: true, null: false |
+|quantity          |float      |                               |
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+belongs_to :meal
+belongs_to :food_item
