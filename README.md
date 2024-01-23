@@ -14,7 +14,7 @@ has_many :meals
 # mealsテーブル
 |Column            |Type       |Options                        |
 |------------------|-----------|-------------------------------|
-|user_id           |references |foreign_key: true, null: false |
+|user              |references |foreign_key: true, null: false |
 |name              |string     |null: false                    |
 |description       |text       |null: false                    |
 |meal_time         |date       |null: false                    |
