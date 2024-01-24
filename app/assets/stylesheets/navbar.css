@@ -1,0 +1,28 @@
+.navbar-custom {
+  background-color: #4CAF50; 
+  color: white; 
+}
+
+.nav-link {
+  color: white; 
+}
+
+.nav-link:hover {
+  background-color: #3e8e41; 
+}
+
+.navbar-brand {
+  color: white; 
+}
+
+.navbar-brand:hover {
+  color: #ccc; 
+}
+
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 30 30'><path d='M0 6h30v4H0zm0 7h30v4H0zm0 7h30v4H0z'/></svg>");
+}
