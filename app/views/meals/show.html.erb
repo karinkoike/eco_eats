@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center" style="height: 100vh;">
+    <div class="col-md-6">
+      <div class="card mt-4">
+        <% if @meal.image.attached? %>
+          <%= image_tag @meal.image, class: 'img-fluid' %>
+        <% else %>
+          <img class="card-img-top" src="https://via.placeholder.com/350x150" alt="Placeholder">
+        <% end %>
+        <div class="card-body">
+          <h3 class="card-title"><%= @meal.name %></h3>
+          <p class="card-text"><%= @meal.description %></p>
+          <!-- ここにCO2削減量や栄養バランスを表示 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
