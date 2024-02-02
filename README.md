@@ -17,7 +17,7 @@ has_many :meals
 |user              |references |foreign_key: true, null: false |
 |name              |string     |null: false                    |
 |description       |text       |null: false                    |
-|meal_time         |date       |null: false                    |
+|meal_time         |datetime   |null: false                    |
 
 belongs_to :user
 has_many :meal_items

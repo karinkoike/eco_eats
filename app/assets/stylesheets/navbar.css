@@ -1,24 +1,27 @@
 .navbar-custom {
-  background-color: #4CAF50; 
+  background-color: #42af46;
   color: white; 
 }
 
-.navbar-custom .navbar-brand,
+.navbar-custom,
 .navbar-custom .nav-link {
-  color: white; /* ナビゲーションリンクの色 */
+  color: white; 
+  font-family: 'Arial', sans-serif;
+  text-shadow: 1px 1px 2px #000000;
+  font-size: 17px;
 }
 
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .nav-link:hover {
-  color: #d4edda; /* ホバー時の色 */
+  color: #d4edda; 
 }
 
 .navbar-custom .nav-link {
-  margin-right: 15px; /* リンク間のスペース */
+  margin-right: 15px;
 }
 
 .navbar-custom .navbar-toggler {
-  border-color: white; /* ハンバーガーメニューのボーダー色 */
+  border-color: white; 
 }
 
 .navbar-toggler-icon {
@@ -29,4 +32,17 @@
   .navbar-custom .navbar-nav .nav-link {
     color: white;
   }
+}
+
+.navbar-brand.logo-style {
+  margin-left: 15px;
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  color: white;
+  text-shadow: 1px 1px 2px #000000; 
+}
+
+.navbar-brand.logo-style:hover {
+  color: #d4edda;  
+  text-decoration: none;
 }

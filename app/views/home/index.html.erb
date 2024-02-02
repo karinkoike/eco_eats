@@ -1,0 +1,16 @@
+<div class="background-image-wrapper">
+  <div class="content d-flex align-items-center justify-content-center">
+    <% if user_signed_in? %>
+      <div class="text-center">
+        <h1>こんにちは、<%= current_user.nickname %>さん！</h1>
+        <p>ようこそEcoEatsへ。素晴らしい食事体験をお楽しみください。</p>
+      </div>
+    <% else %>
+      <div class="text-center">
+        <h1>EcoEatsへようこそ！</h1>
+        <p>健康的で持続可能な食生活を始めましょう。</p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
